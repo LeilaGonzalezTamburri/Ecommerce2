@@ -1,13 +1,16 @@
 import CartWidget from "../CartWidget/CartWidget"
+import {NavLink, Link} from 'react-router-dom'
 
 const NavBar = () => {
     return (
-        <nav>
+        <nav className="NavBar" >
+            <Link to='/'>
             <h3>Games for allnighters</h3>
-            <div>
-                <button>Resident Evil 4</button>
-                <button>Elden Ring</button>
-                <button>Hogwarts Legacy</button>
+            </Link>
+            <div className= 'Categories'>
+                <NavLink to {'/category/RPG'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>RPG</NavLink>
+                <NavLink to {'/category/singlePlayer'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>singlePlayer</NavLink>
+                <NavLink to {'/category/MMO'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>MMO</NavLink>
             </div>
             <CartWidget />
         </nav>
