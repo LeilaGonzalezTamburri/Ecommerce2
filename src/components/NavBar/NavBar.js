@@ -8,9 +8,9 @@ const NavBar = () => {
             <h3>Games for allnighters</h3>
             </Link>
             <div className= 'Categories'>
-                <NavLink to {'/category/RPG'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>RPG</NavLink>
-                <NavLink to {'/category/singlePlayer'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>singlePlayer</NavLink>
-                <NavLink to {'/category/MMO'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>MMO</NavLink>
+                <NavLink to={'/category/RPG'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>RPG</NavLink>
+                <NavLink to={'/category/singlePlayer'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>singlePlayer</NavLink>
+                <NavLink to={'/category/MMO'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>MMO</NavLink>
             </div>
             <CartWidget />
         </nav>

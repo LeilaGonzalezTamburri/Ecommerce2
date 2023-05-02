@@ -21,6 +21,7 @@ const ItemListContainer = ({greeting}) => {
             console.error(error)
         })
     }, [categoryId])
+    console.log(products)
 
 
         /*getProducts()

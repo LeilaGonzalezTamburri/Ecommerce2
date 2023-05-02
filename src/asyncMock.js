@@ -20,7 +20,7 @@ export const getProducts = () => {
     })
 }
 
-export const getProductById = (productId) => {
+/*export const getProductById = (productId) => {
     return new Promise((resolve) => {
         setTimeout (()=> {
             resolve(products.find(prod => prod.id === productId))
@@ -33,5 +33,20 @@ export const getProductsByCategory = (productCategory) => {
         setTimeout (()=> {
             resolve(products.find(prod => prod.category === productCategory))
         },500)
+    })
+}*/
+
+export const getProductById = (productId) => {
+    return new Promise((resolve) => {
+        setTimeout (()=> {
+            resolve(products.filter(prod => prod.id === productId)[0])
+        }, 500)
+    })
+}
+export const getProductsByCategory = (productCategory) => {
+    return new Promise((resolve) => {
+        setTimeout (()=> {
+            resolve(products.filter(prod => prod.category === productCategory))
+        }, 500)
     })
 }
